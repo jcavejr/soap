@@ -1,0 +1,19 @@
+{
+
+  "name" : "SOAP",
+  "version": "1.0",
+  "description": "",
+  "options_page": "",
+  "permissions": ["tabs","activeTab", "declarativeContent", "storage",   "https://api.twitter.com/*"],
+  "background": {
+  "scripts": ["background.js"],
+  "persistent": false
+  },
+
+  "page_action" :{
+    "default_popup" : "login.html"
+  },
+
+  "manifest_version": 2
+
+}
