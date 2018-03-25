@@ -1,0 +1,6 @@
+framework module Pods_Final_S_O_A_P {
+  umbrella header "Pods-Final S.O.A.P-umbrella.h"
+
+  export *
+  module * { export * }
+}
