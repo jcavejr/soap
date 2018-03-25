@@ -86,7 +86,7 @@
           if(i > 0){
             for(var j = 0; j < 57; j++){
               console.log(lines[j]);
-              if(string.substring(i-1).startsWith(" ") && string.substring(i).startsWith(lines[j])){
+              if(string.substring(i-1).startsWith(" ") && string.substring(i).toLowerCase().startsWith(lines[j])){
                 input.setSelectionRange(i, i+"ad".length);
                 input.focus();
                 alert("bad word");
@@ -96,7 +96,7 @@
           }else{
             for(var j = 0; j < 57; j++){
               console.log(lines[j]);
-              if(string.substring(i).startsWith(lines[j])){
+              if(string.substring(i).toLowerCase().startsWith(lines[j])){
                 input.setSelectionRange(i, i+lines[j].length);
                 input.focus();
                 alert("bad word");
