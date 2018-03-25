@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <style>
+      input[type = text],
+      input[type = password]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 0;
+        outline:0;
+        border-bottom: 1px solid #0000ff;
+        box-sizing: border-box;
+      }
+      </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script>
+      var lines = ["anal",
+"anus",
+"arse",
+"ass",
+"ballsack",
+"balls",
+"bastard",
+"bitch",
+"biatch",
+"bloody",
+"blowjob",
+"blow job",
+"bollock",
+"bollok",
+"boner",
+"boob",
+"bugger",
+"bum",
+"butt",
+"buttplug",
+"clitoris",
+"cock",
+"coon",
+"crap",
+"cunt",
+"damn",
+"dick",
+"dildo",
+"dyke",
+"fag",
+"feck",
+"fellate",
+"fellatio",
+"felching",
+"fuck",
+"flange",
+"goddamn",
+"hell",
+"homo",
+"labia",
+"muff",
+"nigger",
+"nigga",
+"penis",
+"prick",
+"pube",
+"pussy",
+"queer",
+"scrotum",
+"slut",
+"smegma",
+"tit",
+"tosser",
+"twat",
+"vagina",
+"wank",
+"whore",
+"wtf"];
+
+       var string = "";
+       var index = 0;
+        document.addEventListener("keyup", function(event) {
+        input = document.getElementById("intext")
+        string = input.value.substring(index);
+        console.log(event);
+        for (var i = 0; i < string.length; i++) {
+          if(i > 0){
+            for(var j = 0; j < 57; j++){
+              console.log(lines[j]);
+              if(string.substring(i-1).startsWith(" ") && string.substring(i).startsWith(lines[j])){
+                input.setSelectionRange(i, i+"ad".length);
+                input.focus();
+                alert("bad word");
+                break;
+              }
+            }
+          }else{
+            for(var j = 0; j < 57; j++){
+              console.log(lines[j]);
+              if(string.substring(i).startsWith(lines[j])){
+                input.setSelectionRange(i, i+lines[j].length);
+                input.focus();
+                alert("bad word");
+                break;
+              }
+            }
+          }
+        }
+
+        });
+
+      </script>
+  </head>
+  <body>
+      <label> Enter Input </label>
+
+      <input type = "text" placeholder="Enter Test" name = "intext" id ="intext"  required>
+  </body>
+</html>
